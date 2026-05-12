@@ -1,5 +1,20 @@
-Environment call from M- mode // vid isclycheniya
-isa/rv32mi/scall.S // test
-0xB000 // reset vector
-0xA880 //trap vector
-Вывод строки «envcall» //obrabotchik
+# Lab2. Fork SCR1
+
+В ходе лабораторной работы изучено и модифицировано открытое ядро SCR1 с архитектурой RISC-V.
+
+В соответствии с вариантом задания проделана следующая работа:
+1) С исходным кодом собрана симуляционная модель с одним тестом (scall.S) с помощью команды:
+
+    >make TARGETS=riscv_isa rv32_isa_tests=isa/rv32mi/scall.S
+
+   По сообщению из log подтверждена работоспособность модели ("Test passed").
+
+2) В файле ./src/includes/scr1_arch_description.svh параметрам ядра *Reset Vector* и *Trap Vector* установлены адреса 0xB000 и 0xA880 соответственно.
+
+3) Изменён linker-скрипт ./sim/tests/common/link.ld для корректного запуска теста с новыми значениями *Reset Vector* и *Trap Vector*.
+
+4) Модифицирована обработка исключений *trap_vector* в файле ./sim/tests/common/riscv_macros.h. Обрабатывается исключение *MACHINE_ECALL*. В log должно выводиться сообщение "envcall".
+
+5) Собрана симуляционная модель с модифицированным кодом, проведена симуляция.
+
+6) Собрана симуляционная модель с векторным файлом simx.vcd. Его можно запустить в GTKWave.

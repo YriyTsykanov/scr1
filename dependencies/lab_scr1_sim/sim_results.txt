@@ -1,0 +1,27 @@
+scr1_top_tb_ahb
+[0;34m---Test:                        scall.hex[0m
+envcall[0;32mTest passed[0m
+[0;34m---Test:                          div.hex[0m
+[0;31mTest failed[0m
+[0;34m---Test:                         divu.hex[0m
+[0;31mTest failed[0m
+[0;34m---Test:                          mul.hex[0m
+[0;31mTest failed[0m
+[0;34m---Test:                         mulh.hex[0m
+[0;31mTest failed[0m
+[0;34m---Test:                       mulhsu.hex[0m
+[0;31mTest failed[0m
+[0;34m---Test:                        mulhu.hex[0m
+[0;31mTest failed[0m
+[0;34m---Test:                          rem.hex[0m
+[0;31mTest failed[0m
+[0;34m---Test:                         remu.hex[0m
+[0;31mTest failed[0m
+[0;34m---Test:                          rvc.hex[0m
+[0;31mTest failed[0m
+
+#--------------------------------------
+# Summary: 1/10 tests passed
+#--------------------------------------
+
+- /home/yriy/Labs/Lab2/scr1/src/tb/scr1_top_tb_runtests.sv:199: Verilog $finish
